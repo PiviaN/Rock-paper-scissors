@@ -138,6 +138,9 @@ function changeScore() {
   scissorsAndRock();
   rockAndPaper();
   rockAndScissors();
+  paperAndPaper();
+  scissorsAndScissors();
+  rockAndRock();
   newRoundOfChoosing();
 }
 
@@ -196,6 +199,39 @@ function rockAndPaper() {
   }, 2000);
 }
 
+function paperAndPaper() {
+  setTimeout(() => {
+    if (
+      leftIconImg.classList.contains("img-icon-hand") &&
+      rightIconImg.classList.contains("img-icon-hand")
+    ) {
+      throwDrawMessage();
+    }
+  }, 2000);
+}
+
+function scissorsAndScissors() {
+  setTimeout(() => {
+    if (
+      leftIconImg.classList.contains("img-icon-scissors") &&
+      rightIconImg.classList.contains("img-icon-scissors")
+    ) {
+      throwDrawMessage();
+    }
+  }, 2000);
+}
+
+function rockAndRock() {
+  setTimeout(() => {
+    if (
+      leftIconImg.classList.contains("img-icon-rock") &&
+      rightIconImg.classList.contains("img-icon-rock")
+    ) {
+      throwDrawMessage();
+    }
+  }, 2000);
+}
+
 function rockAndScissors() {
   setTimeout(() => {
     if (
@@ -208,6 +244,8 @@ function rockAndScissors() {
 }
 
 function updateScoreNumber() {
+  let winMessage = document.querySelector(".win-message");
+  winMessage.classList.toggle("win-message-js");
   localStorage.setItem(`counter${Math.random() * 100000}`, ``);
 }
 
@@ -215,9 +253,16 @@ function removeScoreNumber() {
   if (!localStorage.length) {
     return;
   } else {
+    let loseMessage = document.querySelector(".lose-message");
+    loseMessage.classList.toggle("lose-message-js");
     let lastItemOfLocalStorage = localStorage.key(localStorage.length - 1);
     localStorage.removeItem(lastItemOfLocalStorage);
   }
+}
+
+function throwDrawMessage() {
+  let drawMessage = document.querySelector(".draw-message");
+  drawMessage.classList.toggle("draw-message-js");
 }
 
 function newRoundOfChoosing() {

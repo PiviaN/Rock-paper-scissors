@@ -30,3 +30,17 @@
 .img-icon-rock {
   content: url("/images/icon-rock.svg") !important;
 }
+
+.win-message,
+.lose-message,
+.draw-message {
+  display: none;
+}
+
+.win-message-js,
+.lose-message-js,
+.draw-message-js {
+  text-transform: uppercase;
+  display: block !important;
+  color: hsl(216, 14%, 86%);
+}
