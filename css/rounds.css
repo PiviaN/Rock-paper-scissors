@@ -1,0 +1,32 @@
+.icons-play-bottom-hidden {
+  display: none !important;
+}
+
+.button-icon-rounded-void {
+  border-color: black !important;
+  border-width: 0rem !important;
+  content: url("") !important;
+  background-color: #141539 !important;
+  padding: 5rem !important;
+  pointer-events: none !important;
+}
+
+.icon-hand-2 {
+  border-color: rgb(72, 101, 244) !important;
+}
+
+.icon-hand-2:hover {
+  border-color: rgb(92, 118, 248) !important;
+}
+
+.img-icon-scissors {
+  content: url("/images/icon-scissors.svg") !important;
+}
+
+.img-icon-hand {
+  content: url("/images/icon-paper.svg") !important;
+}
+
+.img-icon-rock {
+  content: url("/images/icon-rock.svg") !important;
+}

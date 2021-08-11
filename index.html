@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/rounds.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+  <div class="control-position">
+
+    <div class="d-flex justify-content-center">
+
+      <div class="floating-box">
+
+        <div class="names">
+          <h2>Rock</h2>
+          <h2>Paper</h2>
+          <h2>Scissors</h2>
+        </div>
+
+        <div class="score rounded-3 text-center">
+          <h3>Score</h3>
+          <h1 id="score-text">0</h1>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="control-position-icons">
+
+      <div class=" d-flex justify-content-center icons-play-top mt-5">
+
+        <div class="icon-hand button-icon-rounded rounded-pill" id="icon-hand" onclick="paperRockScissors(event)">
+          <img class="icon left-icon img-icon-hand" src="/images/icon-paper.svg" alt="paper icon" id="icon-hand">
+        </div>
+
+        <div class="icon-scissors button-icon-rounded rounded-pill" id="icon-scissors"
+          onclick="paperRockScissors(event)">
+          <img class="icon right-icon img-icon-scissors" src="/images/icon-scissors.svg" alt="scissors icon"
+            id="icon-scissors">
+        </div>
+
+      </div>
+
+
+      <div class="d-flex justify-content-center icons-play-bottom mt-5">
+
+        <div class="icon-rock button-icon-rounded rounded-pill" id="icon-rock" onclick="paperRockScissors(event)">
+          <img class="icon img-icon-rock" src="/images/icon-rock.svg" alt="rock icon" id="icon-rock">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-end open-rules">
+    <button type="button" id="open-modal" class="btn btn-rules" data-bs-toggle="modal" data-bs-target="#modal">
+      Rules
+    </button>
+  </div>
+
+  <div class="modal" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="exampleModalLabel">Rules</h2>
+          <button type="button" class="btn-close" id="close-modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <img src="images/image-rules.svg" alt="rules modal">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script src="js/rules.js"></script>
+<script src="js/gameMechanics.js"></script>
+
+</html>
