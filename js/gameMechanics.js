@@ -189,7 +189,7 @@ function rockAndPaper() {
   setTimeout(() => {
     if (
       leftIconImg.classList.contains("img-icon-rock") &&
-      rightIconImg.classList.contains("img-icon-paper")
+      rightIconImg.classList.contains("img-icon-hand")
     ) {
       removeScoreNumber();
     }
