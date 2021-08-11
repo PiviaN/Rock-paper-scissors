@@ -212,11 +212,11 @@ function updateScoreNumber() {
 }
 
 function removeScoreNumber() {
-  if (localStorage.length >= 0) {
+  if (!localStorage.length) {
+    return;
+  } else {
     let lastItemOfLocalStorage = localStorage.key(localStorage.length - 1);
     localStorage.removeItem(lastItemOfLocalStorage);
-  } else {
-    return;
   }
 }
 
