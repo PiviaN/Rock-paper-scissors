@@ -1,3 +1,54 @@
+const openModal = document.getElementById("open-modal");
+const myModal = document.getElementById("modal");
+const btnCloseModal = document.getElementById("close-modal");
+const mainContent = document.querySelector(".control-position");
+const buttonIconRounded = document.querySelectorAll(".button-icon-rounded");
+
+let floatingBox = document.querySelector(".floating-box");
+let iconsPlayBottom = document.querySelector(".icons-play-bottom");
+let iconScissors = document.querySelector(".icon-scissors");
+let imgIconScissors = document.querySelector(".img-icon-scissors");
+
+let iconHand = document.querySelector(".icon-hand");
+let imgIconHand = document.querySelector(".img-icon-hand");
+
+let scoreText = document.getElementById("score-text");
+
+let leftIcon = document.querySelector(".img-icon-hand");
+let rightIcon = document.querySelector(".img-icon-scissors");
+
+let leftIconImg = document.querySelector(".left-icon");
+let rightIconImg = document.querySelector(".right-icon");
+
+let leftHandID = document.getElementById("icon-hand");
+let rightHandID = document.getElementById("icon-scissors");
+
+openModal.addEventListener("click", () => {
+  myModal.classList.toggle("modal-rules");
+  addClassIfModalIsOpen();
+  removePointerEventsOfButtons();
+});
+
+btnCloseModal.addEventListener("click", () => {
+  myModal.classList.toggle("modal-rules");
+  addClassIfModalIsOpen();
+  removePointerEventsOfButtons();
+});
+
+function addClassIfModalIsOpen() {
+  if (myModal.classList.contains("modal-rules")) {
+    mainContent.classList.add("body-modal");
+  } else {
+    mainContent.classList.remove("body-modal");
+  }
+}
+
+function removePointerEventsOfButtons() {
+  buttonIconRounded.forEach((icon) => {
+    icon.classList.toggle("no-pointer-events");
+  });
+}
+
 function paperRockScissors(event) {
   switch (event.target.id) {
     case "icon-hand":
